@@ -49,7 +49,7 @@ services:
 
   shipping-ops-producer:
     build:
-      context: ./shipping-ops-producer
+      context: ../shipping-ops-producer
     container_name: shipping-ops-producer
     depends_on:
       - kafka
@@ -64,7 +64,7 @@ services:
 
   dispatch-orchestrator-consumer:
     build:
-      context: ./dispatch-orchestrator-consumer
+      context: ../dispatch-orchestrator-consumer
     container_name: dispatch-orchestrator-consumer
     depends_on:
       - kafka
