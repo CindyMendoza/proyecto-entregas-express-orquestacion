@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "06d1581d-1880-4d60-9fd5-78d8ce6c8e08",
+		"name": "Taller-02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14010928"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8087/api/shipments",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shipmentId\": \"SHP-001\",\r\n    \"orderId\": \"ORD-12345\",\r\n    \"customerId\": \"CUST-777\",\r\n    \"address\": \"Calle Falsa 123\",\r\n    \"city\": \"Lima\",\r\n    \"postalCode\": \"15000\",\r\n    \"serviceLevel\": \"EXPRESS\",\r\n    \"requestedAt\": \"2025-11-10T10:30:00Z\",\r\n    \"attemptNumber\": 1,\r\n    \"correlationId\": \"corr-XYZ-123\",\r\n    \"status\": \"NEW\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/api/shipments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"shipments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8088/api/shipments/{{shipmentId}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/api/shipments/{{shipmentId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"shipments",
+						"{{shipmentId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
